@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeTest;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 
 public class LoginTest {
@@ -18,15 +19,22 @@ public class LoginTest {
   @BeforeTest
   public void setUp() {
 	  
-//	  projectPath =  System.getProperty("user.dir");
-//	  System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriverL");
+	  
+	  
+	  ChromeOptions chromeOptions = new ChromeOptions();
+	  chromeOptions.setHeadless(true);
+	  
+	  projectPath =  System.getProperty("user.dir");
+	  System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriverL");
 	 
-	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");	
-	  driver = new ChromeDriver();
+//	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");	
+	  driver = new ChromeDriver(chromeOptions);
 	  driver.manage().window().maximize();
 	  driver.get("https://www.google.com/");
 	  driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	  login = new LoginPage(driver);
+	  
+	  
   }
 
   @Test
