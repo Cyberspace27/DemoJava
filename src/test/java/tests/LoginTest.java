@@ -22,10 +22,10 @@ public class LoginTest {
 	  ChromeOptions chromeOptions = new ChromeOptions();
 	  chromeOptions.setHeadless(true);
 	  
-//	  projectPath =  System.getProperty("user.dir");
-//	  System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriverL");
+	  projectPath =  System.getProperty("user.dir");
+	  System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriver");
 	 
-	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");	
+//	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");	
 	  driver = new ChromeDriver(chromeOptions);
 	  
 	  
