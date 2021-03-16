@@ -29,9 +29,13 @@ public class LoginTest {
 	 
 //	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");	
 	  driver = new ChromeDriver(chromeOptions);
-	  driver.manage().window().maximize();
+	  
+	  
+//	  driver.manage().window().maximize();
+//	  driver.get("https://www.google.com/");
+//	  driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  driver.get("https://www.google.com/");
-	  driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	  login = new LoginPage(driver);
 	  
 	  
