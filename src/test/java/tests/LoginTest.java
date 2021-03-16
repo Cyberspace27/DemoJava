@@ -18,10 +18,10 @@ public class LoginTest {
   @BeforeTest
   public void setUp() {
 	  
-	  projectPath =  System.getProperty("user.dir");
-	  System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriverL");
+//	  projectPath =  System.getProperty("user.dir");
+//	  System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriverL");
 	 
-//	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");	
+	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");	
 	  driver = new ChromeDriver();
 	  driver.manage().window().maximize();
 	  driver.get("https://www.google.com/");
