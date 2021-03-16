@@ -22,11 +22,11 @@ public class LoginTest {
 	  ChromeOptions chromeOptions = new ChromeOptions();
 	  chromeOptions.setHeadless(true);
 	  
-	  projectPath =  System.getProperty("user.dir");
-	  System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriverL");
+//	  projectPath =  System.getProperty("user.dir");
+//	  System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriverL");
 	 
-//	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");	
-	  driver = new ChromeDriver();
+	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");	
+	  driver = new ChromeDriver(chromeOptions);
 	  
 	  
 //	  driver.manage().window().maximize();
@@ -35,7 +35,6 @@ public class LoginTest {
 	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  driver.get("https://www.google.com/");
 	  login = new LoginPage(driver);
-	  
 	  
   }
 
