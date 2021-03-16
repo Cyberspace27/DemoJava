@@ -19,8 +19,6 @@ public class LoginTest {
   @BeforeTest
   public void setUp() {
 	  
-	  
-	  
 	  ChromeOptions chromeOptions = new ChromeOptions();
 	  chromeOptions.setHeadless(true);
 	  
@@ -28,7 +26,7 @@ public class LoginTest {
 	  System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriverL");
 	 
 //	  System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");	
-	  driver = new ChromeDriver(chromeOptions);
+	  driver = new ChromeDriver();
 	  
 	  
 //	  driver.manage().window().maximize();
